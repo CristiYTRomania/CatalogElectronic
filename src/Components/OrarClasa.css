@@ -1,0 +1,23 @@
+x.dx-scheduler-date-table-row:nth-of-type(even) {
+  background-color: #f5f5f5 !important;
+}
+
+.dx-popup-content,
+.dx-popup-normal {
+  min-width: 1000px !important;
+}
+
+.appoitment-box {
+  font-size: 12px !important;
+  color: white !important;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.dx-scheduler-appointment-content {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
