@@ -1,0 +1,348 @@
+:root {
+  light-blue: #1c90ff;
+  grey-blue: #ecf4f5;
+  dark-blue: #001628;
+}
+
+.layouy-app {
+  padding-top: 10px !important;
+  minheight: 360;
+}
+table {
+  page-break-inside: auto;
+}
+.ant-select-disabled:where(.css-dev-only-do-not-override-zs1nfe).ant-select:not(
+    .ant-select-customize-input
+  )
+  .ant-select-selector {
+  color: black !important;
+  background: white !important;
+  cursor: not-allowed;
+}
+.ant-select-selection-item {
+  color: black !important;
+}
+.block.image img {
+  width: 100% important!;
+  height: auto;
+}
+
+tr {
+  page-break-inside: avoid;
+  page-break-after: auto;
+}
+.add-teacher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+.add-comment {
+  width: 80%;
+}
+
+@media only screen and (max-width: 750px) {
+  .App {
+    padding-top: 30px;
+    background-color: #f5f5f5;
+  }
+  .add-teacher {
+    display: block !important;
+  }
+  .ant-layout-sider-zero-width-trigger {
+    top: 0vh !important;
+    z-index: 5;
+  }
+  .ant-picker-dropdown {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%) !important;
+  }
+  .ant-picker-panels {
+    flex-direction: column;
+    position: relative;
+  }
+  .ant-picker-panels > *:first-child button.ant-picker-header-next-btn {
+    visibility: visible !important;
+  }
+
+  .ant-picker-panels > *:first-child button.ant-picker-header-super-next-btn {
+    visibility: visible !important;
+  }
+
+  .ant-picker-panels > *:last-child {
+    display: none;
+  }
+
+  .ant-picker-panel-container,
+  .ant-picker-footer {
+    width: 280px !important;
+  }
+
+  .ant-picker-footer-extra > div {
+    flex-wrap: wrap !important;
+  }
+  .ant-tabs-nav-operations {
+    width: 0 !important;
+  }
+  .ant-tabs-tab {
+    margin: 0 0 0 10px !important;
+  }
+  .ant-space {
+    display: block !important;
+  }
+  .no-print {
+    .ant-space {
+      display: inline-flex !important;
+    }
+  }
+  .add-button {
+    margin-top: 5px;
+    width: 100%;
+  }
+  .ant-descriptions-header {
+    padding-top: 10px !important;
+    display: block !important;
+  }
+  .ant-descriptions-extra {
+    padding-top: 10px !important;
+  }
+  .ant-tabs-tab {
+    font-size: 14px !important;
+  }
+  .ant-tabs-tab-btn {
+    padding: 1px !important;
+  }
+  .add-comment {
+    width: 100%;
+  }
+}
+
+.App {
+  text-align: center;
+}
+.anticon-close-circle {
+  display: none;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.dx-scheduler-work-space-day {
+  .dx-scheduler-date-table-cell {
+    height: 80px !important;
+  }
+
+  .dx-scheduler-time-panel-cell {
+    height: 80px !important;
+  }
+}
+.dx-scheduler-work-space-week {
+  .dx-scheduler-date-table-cell {
+    height: 150px !important;
+  }
+
+  .dx-scheduler-time-panel-cell {
+    height: 150px !important;
+  }
+}
+.cards-profiles {
+  max-width: 1200px;
+  margin: 0 auto;
+  white-space: nowrap;
+  display: grid;
+  width: 100%;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.slick-dots {
+  color: black !important;
+}
+.swithcer {
+  .ant-switch {
+    background-color: green !important;
+  }
+  .ant-switch-checked {
+    background-color: purple !important;
+  }
+}
+.dataResult {
+  margin-top: 5px;
+
+  width: 89%;
+  max-height: 200px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.card-profile {
+  background-color: dodgerblue;
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  font-size: 16px;
+  padding: 1rem;
+  height: auto;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+table {
+  width: auto;
+}
+@media print {
+  .ant-layout-content {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .ant-layout-sider {
+    display: none !important;
+  }
+
+  @page {
+    margin: 0;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.condica-export .ant-table-tbody > tr > td {
+  border: 0.2px solid grey !important;
+  p {
+    text-align: center;
+  }
+}
+.condica-export th {
+  text-align: center !important;
+  border: 0.2px solid grey !important;
+}
+.hideql {
+  .ql-toolbar {
+    display: none !important;
+  }
+}
+
+@media print {
+  .print {
+    page-break-before: always;
+  } /* page-break-after works, as well */
+  .condica-export .ant-table-tbody > tr > td {
+    padding: 0 !important;
+  }
+  .condica-export p {
+    margin: 0 !important;
+  }
+  .catalog-export .ui.table td {
+    padding: 0px !important;
+    border-radius: 0px;
+  }
+}
+.condica-export .ant-table-tbody > tr > td {
+  padding: 0 !important;
+}
+.condica-export p {
+  margin: 0 !important;
+}
+.catalog-export .ui.table td {
+  padding: 0.1px !important;
+}
+
+.catalog-export .ui.attached.table {
+  height: 100% !important;
+}
+.catalog-export .ui.table thead th {
+  border: 0.5px solid black;
+  padding: 0;
+  background: unset !important;
+  margin: 0;
+}
+.catalog-export .ui.celled.table tr td {
+  border: 0.5px solid black;
+  padding: 0;
+  margin: 0;
+}
+.catalog-export .detalii {
+  p {
+    margin: 0;
+  }
+}
+@media print {
+  .catalog-export tr,
+  .catalog-export table,
+  .catalog-export th,
+  .catalog-export td {
+    break-inside: avoid; /* Previne împărțirea rândurilor */
+    page-break-inside: avoid; /* Compatibilitate suplimentară */
+  }
+}
+.catalog-export ui.table thead {
+  height: 30px;
+}
+.catalog-export tbody {
+  height: 100%;
+}
+@media print {
+  .ant-tabs-nav-wrap {
+    display: none;
+  }
+  .ant-btn-default {
+    display: none;
+  }
+}
+
+.ant-tag.ant-tag-red {
+  text-wrap: wrap;
+}
+.ant-picker-header-super-prev-btn {
+  display: none !important;
+}
+.ant-picker-header-super-next-btn {
+  display: none !important;
+}
+.ant-picker-header-prev-btn {
+  background-color: red !important;
+  color: white !important;
+  width: 40px;
+  padding-left: 1px;
+}
+
+.ant-picker-header-next-btn {
+  background-color: red !important;
+  color: white !important;
+  width: 40px;
+  padding-right: 1px;
+}
