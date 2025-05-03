@@ -80,133 +80,9 @@ function Catalog({ classData, setClassData, mode = "edit", permision }) {
   const [display, setDisplay] = useState(false);
 
   const [id, setId] = useState("");
-  const auditRef2 = useRef();
   const [profileElevi, setProfileElevi] = useState({});
-  const [sumar, setSumar] = useState(false);
   const [open2, setOpen2] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
-  const banned = [
-    "Teorie-solfegiu-dicteu",
-    "Armonie",
-    "Etnografie și folclor muzical",
-    "Forme muzicale",
-    "Muzică vocală tradițională românească",
-    "Artă vocală interpretativă",
-    "Corepetiție",
-    "Instrument principal - Pian",
-    "Instrument principal - Vioară",
-    "Instrument principal - Chitară",
-    "Instrument principal - Clarinet",
-    "Instrument principal - Flaut",
-    "Instrument principal - Contrabas",
-    "Pian complementar",
-    "Instrument la alegere - Vioară",
-    "Instrument la alegere - Chitară",
-    "Instrument la alegere - Clarinet",
-    "Instrument la alegere - Flaut",
-    "Instrument la alegere - Contrabas",
-    "Instrument auxiliar - Vioară",
-    "Instrument auxiliar - Chitară",
-    "Instrument auxiliar - Clarinet",
-    "Instrument auxiliar - Flaut",
-    "Ansamblu coral/Ansamblu instrumental",
-    "Acompaniament",
-    "Ansamblu orchestral/Ansamblu instrumental/coral",
-    "Ansamblu folcloric",
-    "Muzică de cameră",
-  ];
-
-  const pref = [
-    "Limba și literatura română",
-    "Limba Engleză",
-    "Limba Italiană",
-    "Matematică",
-    "Fizică",
-    "Chimie",
-    "Biologie",
-    "Istorie",
-    "Geografie",
-    "Logică",
-    "Religie",
-    "Arte vizuale și abilități practice",
-    "Educație fizică",
-    "Teorie-solfegiu-dicteu",
-    "Tehnologia informației și a comunicațiilor",
-    "Etnografie și folclor muzical",
-    "Muzică vocală tradițională românească",
-    "Instrument la alegere - Vioară",
-    "Instrument la alegere - Chitară",
-    "Instrument la alegere - Clarinet",
-    "Instrument la alegere - Flaut",
-    "Instrument la alegere - Contrabas",
-    "Corepetiție",
-    "Ansamblu folcloric",
-    "Istoria Muzicii",
-    "Psihologie",
-    "Educație Anteprenorială",
-    "Economie",
-    "Armonie",
-    "Forme muzicale",
-    "Muzică de cameră",
-    "Consiliere și orientare / Purtare",
-  ];
-  const handlePrint = useReactToPrint({
-    content: () => auditRef.current,
-  });
-  const handlePrint2 = useReactToPrint({
-    content: () => auditRef2.current,
-  });
-
-  async function generateDocument(resume, templatePath) {
-    try {
-      const response = await fetch(templatePath);
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      const data = await response.arrayBuffer();
-
-      if (data.byteLength === 0) {
-        throw new Error("Template data is empty!");
-      }
-
-      let zip;
-      try {
-        zip = new PizZip(data);
-      } catch (error) {
-        throw new Error("Error reading ZIP data: " + error.message);
-      }
-
-      let templateDoc;
-      try {
-        templateDoc = new Docxtemplater(zip, {
-          paragraphLoop: true,
-          linebreaks: true,
-        });
-      } catch (error) {
-        throw new Error("Error loading docxtemplater: " + error.message);
-      }
-
-      templateDoc.render(resume);
-
-      const base64 = templateDoc.getZip().generate({
-        type: "base64",
-        mimeType:
-          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      });
-
-      return base64;
-    } catch (error) {
-      console.error("Error generating document: " + error.message);
-      return null;
-    }
-  }
-
-  const styleD = () => {
-    if (onlyWidth < 700) return "auto";
-    if (onlyWidth < 1000) return "auto auto ";
-    if (onlyWidth < 1200) return "auto auto auto ";
-    return "auto auto auto  ";
-  };
 
   const fetchData = async () => {
     let newArray = [];
@@ -310,80 +186,6 @@ function Catalog({ classData, setClassData, mode = "edit", permision }) {
       else newArray[++index] = [e];
     });
     return newArray;
-  };
-  const exportToExcel = () => {
-    const worksheetData = [];
-
-    // Determinăm numărul maxim de note
-    let maxNotes = 0;
-    eleviData.forEach((elev) => {
-      const noteElev = gradesElevi?.[elev.id]?.note?.filter(
-        (n) =>
-          n.tip === "nota" &&
-          new Date(n.date) <= new Date("2024/12/21") &&
-          classData.materii.find((m) => m.materie === n.materieId)
-      );
-      maxNotes = Math.max(maxNotes, noteElev?.length || 0);
-    });
-
-    // Header row
-    const headerRow = [
-      "Elev",
-      ...Array.from({ length: maxNotes }, (_, i) => `Nota ${i + 1}`),
-    ];
-    worksheetData.push(headerRow);
-
-    // Data rows
-    eleviData
-      .sort((a, b) => a?.nume?.localeCompare(b.nume, "ro"))
-      .forEach((elev) => {
-        const row = [elev.nume];
-        const noteElev =
-          gradesElevi?.[elev.id].note
-            .filter(
-              (n) =>
-                n.tip === "nota" &&
-                new Date(n.date) <= new Date("2024/12/21") &&
-                classData.materii.find((m) => m.materie === n.materieId)
-            )
-            .sort((a, b) =>
-              classData.materii.findIndex((m) => m.materie === a.materieId) <
-              classData.materii.findIndex((m) => m.materie === b.materieId)
-                ? -1
-                : classData.materii.findIndex(
-                    (m) => m.materie === a.materieId
-                  ) ===
-                  classData.materii.findIndex((m) => m.materie === b.materieId)
-                ? a.date - b.date
-                : 1
-            )
-            ?.filter(
-              (n) =>
-                n.tip === "nota" &&
-                new Date(n.date) <= new Date("2024/12/21") &&
-                new Date(n.date) >= new Date("2024/09/09") &&
-                classData.materii.find((m) => m.materie === n.materieId)
-            ) || [];
-        let total = 0;
-        let count = 0;
-
-        // Adăugăm notele elevului
-        noteElev.forEach((nota) => {
-          row.push(nota.nota);
-        });
-
-        // Completăm cu 0 dacă numărul de note este mai mic decât `maxNotes`
-        for (let i = noteElev.length; i < maxNotes; i++) {
-          row.push("");
-        }
-
-        worksheetData.push(row);
-      });
-
-    const worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, "Catalog");
-    XLSX.writeFile(workbook, `Catalog ${renderClassName(classData)}.xlsx`);
   };
 
   const formatDate = (today) => {
@@ -676,27 +478,6 @@ function Catalog({ classData, setClassData, mode = "edit", permision }) {
                         )}
                     </p>
 
-                    {new Date() > new Date("2024-10-01") &&
-                      (user.type === "admin" ||
-                        (user.id || user.uid) === classData.diriginte) &&
-                      gradesElevi?.[e.id]?.absente?.absente_dupa_motivari
-                        .length >
-                        Math.floor(
-                          (classData.ore.length *
-                            Math.floor(
-                              (new Date() - new Date("2024-09-09")) /
-                                (1000 * 60 * 60 * 24 * 7)
-                            )) /
-                            5
-                        ) &&
-                      classData?.ore?.length > 0 && (
-                        <>
-                          {" "}
-                          <p style={{ color: "red", fontSize: "15px" }}>
-                            Elevul a absentat la mai mult de 20% din ore
-                          </p>
-                        </>
-                      )}
                     {e.retras !== true &&
                       e.mutat !== true &&
                       classData.freeze !== true && (
@@ -782,33 +563,6 @@ function Catalog({ classData, setClassData, mode = "edit", permision }) {
                                               style={{
                                                 borderBottom: "1px solid black",
                                                 backgroundColor: "unset",
-                                                //activeaza doar daca vrei sa arati ca nu sunt suficiente note
-                                                // (
-                                                //   gradesElevi?.[e.id]?.note ||
-                                                //   []
-                                                // ).filter(
-                                                //   (n) =>
-                                                //     n.tip === "nota" &&
-                                                //     n.materieId === m.materie
-                                                // ).length > 0 &&
-                                                // (
-                                                //   gradesElevi?.[e.id]?.note ||
-                                                //   []
-                                                // ).filter(
-                                                //   (n) =>
-                                                //     n.tip === "nota" &&
-                                                //     n.materieId === m.materie
-                                                // ).length < 4 &&
-                                                // (
-                                                //   gradesElevi?.[e.id]?.note ||
-                                                //   []
-                                                // ).filter(
-                                                //   (n) =>
-                                                //     n.tip === "corigenta" &&
-                                                //     n.materieId === m.materie
-                                                // ).length === 0
-                                                //   ? "#eb9371"
-                                                //   : "unset",
                                               }}
                                             >
                                               <CatalogTabel.Cell>
