@@ -19,7 +19,6 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import Chats from "../Pages/Chats/View";
 import { getDataDoc } from "../database";
 import { testSlice } from "../redux/store";
 const { actions } = testSlice;
@@ -72,23 +71,11 @@ const NavbarElev = () => {
           : {}
       }
     >
-      <Chats open={open} setOpen={setOpen} />
       <ProfileElevi open={openSearch} setOpen={setOpenSearch} />
       <div
         style={{ width: "200px", display: "flex", justifyContent: "center" }}
       >
         {" "}
-        {collapsed === false && (
-          <Image
-            width={100}
-            height={100}
-            src={process.env.REACT_APP_LOGO}
-            preview={false}
-            onClick={() => {
-              navigate("/");
-            }}
-          />
-        )}
       </div>
 
       <Menu

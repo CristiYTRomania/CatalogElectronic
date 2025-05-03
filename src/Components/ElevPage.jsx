@@ -26,7 +26,6 @@ import { RollbackOutlined } from "@ant-design/icons";
 import Docxtemplater from "docxtemplater";
 import PizZip from "pizzip";
 import { saveAs } from "file-saver";
-import template from "./instiintare parinti 2024 completat.docx";
 
 import {
   useWindowSize,
@@ -56,7 +55,7 @@ import EditElev from "./EditElev";
 import { limit } from "firebase/firestore";
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "../database/firebase";
-import templateCorigenta from "./instiintare parinti corigenti completat.docx";
+
 import { motiveazaAbsente } from "../utils/absente";
 import withErrorBoundary from "./withErrorComponent";
 const { actions } = testSlice;
@@ -653,21 +652,6 @@ function ElevPage() {
                 <Descriptions.Item label="Bursa">
                   {elevData.bursa}
                 </Descriptions.Item>
-                {process.env.REACT_APP_NAME === "LMTJ" && (
-                  <Descriptions.Item label="Prof. Indr">
-                    {elevData.profindr || ""}
-                  </Descriptions.Item>
-                )}
-                {process.env.REACT_APP_NAME === "LMTJ" && (
-                  <Descriptions.Item label="Ins. Prin.">
-                    {elevData.insprin || ""}
-                  </Descriptions.Item>
-                )}
-                {process.env.REACT_APP_NAME === "LMTJ" && (
-                  <Descriptions.Item label="Ins. Sec.">
-                    {elevData.inssec || ""}
-                  </Descriptions.Item>
-                )}
 
                 <Descriptions.Item label="Email-uri abonate">
                   {(elevData?.parintii || []).map((e) => (

@@ -208,21 +208,6 @@ function Profil() {
                     {user?.bursa}
                   </Descriptions.Item>
 
-                  {process.env.REACT_APP_NAME === "LMTJ" && (
-                    <Descriptions.Item label="Prof. Indr">
-                      {user.profindr || ""}
-                    </Descriptions.Item>
-                  )}
-                  {process.env.REACT_APP_NAME === "LMTJ" && (
-                    <Descriptions.Item label="Ins. Prin.">
-                      {user.insprin || ""}
-                    </Descriptions.Item>
-                  )}
-                  {process.env.REACT_APP_NAME === "LMTJ" && (
-                    <Descriptions.Item label="Ins. Sec.">
-                      {user.inssec || ""}
-                    </Descriptions.Item>
-                  )}
                   <Descriptions.Item label="Email-uri abonate">
                     {(user?.parintii || []).map((e) => (
                       <Tag>{e}</Tag>

@@ -1,0 +1,12 @@
+.ant-tabs-nav-list {
+  padding-left: 5%;
+}
+.ant-tabs-extra-content {
+  padding-right: 1%;
+}
+.ant-picker-time-panel-cell-inner {
+  display: flex !important;
+  justify-content: center !important;
+  text-align: center !;
+  width: auto !important;
+}

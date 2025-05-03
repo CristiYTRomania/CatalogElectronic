@@ -127,21 +127,23 @@ function EditElev({ elevData, setMode, clase, colors, setElevData, id }) {
     try {
       let elevData = await getDataDoc("elevi", id);
       const firebaseConfig = {
-        apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-        authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-        projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-        storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-        messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-        appId: process.env.REACT_APP_FIREBASE_APP_ID,
+        apiKey: "AIzaSyCNeic3g7sGVCz0rI2TewmRu9NTi2H6Giw",
+        authDomain: "catalog-cce7f.firebaseapp.com",
+        projectId: "catalog-cce7f",
+        storageBucket: "catalog-cce7f.appspot.com",
+        messagingSenderId: "1050076419786",
+        appId: "1:1050076419786:web:066fde7513bc7b91430633",
+        measurementId: "G-QKL46BL0DV",
       };
       if (adresaEmail !== elevData.email) {
         const firebaseConfig = {
-          apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-          authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-          projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-          storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-          messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-          appId: process.env.REACT_APP_FIREBASE_APP_ID,
+          apiKey: "AIzaSyCNeic3g7sGVCz0rI2TewmRu9NTi2H6Giw",
+          authDomain: "catalog-cce7f.firebaseapp.com",
+          projectId: "catalog-cce7f",
+          storageBucket: "catalog-cce7f.appspot.com",
+          messagingSenderId: "1050076419786",
+          appId: "1:1050076419786:web:066fde7513bc7b91430633",
+          measurementId: "G-QKL46BL0DV",
         };
         let Secondary = initializeApp(firebaseConfig, "secondary");
         let auth2 = getAuth(Secondary);
@@ -521,36 +523,7 @@ function EditElev({ elevData, setMode, clase, colors, setElevData, id }) {
             }}
           />
         </Descriptions.Item>
-        {process.env.REACT_APP_NAME === "LMTJ" && (
-          <Descriptions.Item label="Prof. Indr">
-            <Input
-              value={profindr}
-              onChange={(e) => {
-                setProfindr(e.target.value);
-              }}
-            />
-          </Descriptions.Item>
-        )}
-        {process.env.REACT_APP_NAME === "LMTJ" && (
-          <Descriptions.Item label="Ins. Prin.">
-            <Input
-              value={insprin}
-              onChange={(e) => {
-                setInsprin(e.target.value);
-              }}
-            />
-          </Descriptions.Item>
-        )}
-        {process.env.REACT_APP_NAME === "LMTJ" && (
-          <Descriptions.Item label="Ins. Sec.">
-            <Input
-              value={inssec}
-              onChange={(e) => {
-                setInssec(e.target.value);
-              }}
-            />
-          </Descriptions.Item>
-        )}
+
         <Descriptions.Item label="Locul Nasterii">
           <Input
             value={loculNasteri}
