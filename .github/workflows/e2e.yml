@@ -5,14 +5,9 @@ on: [push, pull_request]
 jobs:
   lint:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.ref || github.ref }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -20,27 +15,9 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: yarn
+        run: npm install
 
-      - name: Run ESLint and fix
-        run: npx eslint src --ext .js,.jsx,.ts,.tsx --fix || true
-
-      - name: Commit and push fixes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
-          git add .
-          
-          if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "chore(lint): auto-fix lint errors [skip ci]"
-            # Push to current branch pentru PR sau push normal
-            git push origin HEAD:${{ github.head_ref || github.ref_name }}
-          fi
-
-      - name: Fail if any warnings remain
+      - name: Run ESLint check
         run: npx eslint src --ext .js,.jsx,.ts,.tsx --max-warnings 0
 
   cypress-run:
