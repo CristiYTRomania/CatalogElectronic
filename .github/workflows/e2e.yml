@@ -22,7 +22,7 @@ jobs:
       - name: Run ESLint with fix
         id: eslint
         run: |
-          npx eslint src --ext .js,.jsx,.ts,.tsx --fix || echo "ESLINT_FAILED=true" >> $GITHUB_ENV
+          npx eslint src --ext .js,.jsx,.ts,.tsx --fix --max-warnings 0 || echo "ESLINT_FAILED=true" >> $GITHUB_ENV
 
       - name: Commit changes if needed
         run: |
