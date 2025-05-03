@@ -15,7 +15,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: yarn
 
       - name: Run ESLint check
         run: npx eslint src --ext .js,.jsx,.ts,.tsx --max-warnings 0
@@ -34,7 +34,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: yarn
 
       - name: Run E2E Tests
         run: npm run test:e2e
