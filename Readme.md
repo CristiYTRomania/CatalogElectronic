@@ -66,6 +66,8 @@ Aplicația este disponibilă online la: [https://numele-aplicatiei.vercel.app](h
 - Fiecare coleg a lucrat pe un **branch propriu**
 - Am făcut **pull requests** către `main`
 - Coechipierii au oferit **code review**
+- De asemenea, s-a asteptat pana cand testele au fost validate
+- ex: [PR](https://github.com/CristiYTRomania/CatalogElectronic/pull/7)
 - ✅ S-au realizat **minim 10 commits per membru**
 
 ---
@@ -74,6 +76,8 @@ Aplicația este disponibilă online la: [https://numele-aplicatiei.vercel.app](h
 
 - Am implementat **2 teste automate** folosind **GitHub Actions**:
   - ✅ Test E2E cu **Cypress**
+- O altă testare ca si consecință este deploy-ul vercel pentru fiecare pull-request, astfel putem verifca cum va arata producția și lăsa și comentarii direct in deploy dacă ceva vrem modificat, vizual.
+- EX: [PR](https://github.com/CristiYTRomania/CatalogElectronic/pull/10)
 - **Nu permitem merge-ul** fără ca testele să treacă
 
 ---
@@ -81,7 +85,8 @@ Aplicația este disponibilă online la: [https://numele-aplicatiei.vercel.app](h
 ### 🔹 5. Raportare bug & rezolvare cu pull request *(1 pct)*
 
 - Bug-urile identificate au fost **rezolvate prin PR-uri**
-- Am urmat procesul de **review + fix + merge**
+- Am urmat procesul de **ticket + branch-fix + pr + review + merge**
+- ex:[PR](https://github.com/CristiYTRomania/CatalogElectronic/pull/10)
 
 ---
 
