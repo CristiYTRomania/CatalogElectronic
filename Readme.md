@@ -70,7 +70,6 @@ Aplicația este disponibilă online la: [https://numele-aplicatiei.vercel.app](h
 
 - Am implementat **2 teste automate** folosind **GitHub Actions**:
   - ✅ Test E2E cu **Cypress**
-  - ✅ Test de lint cu **ESLint**
 - **Nu permitem merge-ul** fără ca testele să treacă
 
 ---
