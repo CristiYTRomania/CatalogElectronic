@@ -340,7 +340,7 @@ function EditElev({ elevData, setMode, clase, colors, setElevData, id }) {
 
                   text:
                     "Intra pe " +
-                    process.env.REACT_APP_LINK +
+                    "https://catalog-electronic.vercel.app/" +
                     " logheaza-te cu " +
                     email +
                     " si parola " +

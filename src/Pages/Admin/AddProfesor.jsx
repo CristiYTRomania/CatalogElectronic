@@ -94,12 +94,13 @@ function AddProfesor({
     setConfirmLoading(true);
     try {
       const firebaseConfig = {
-        apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-        authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-        projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-        storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-        messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-        appId: process.env.REACT_APP_FIREBASE_APP_ID,
+        apiKey: "AIzaSyCNeic3g7sGVCz0rI2TewmRu9NTi2H6Giw",
+        authDomain: "catalog-cce7f.firebaseapp.com",
+        projectId: "catalog-cce7f",
+        storageBucket: "catalog-cce7f.appspot.com",
+        messagingSenderId: "1050076419786",
+        appId: "1:1050076419786:web:066fde7513bc7b91430633",
+        measurementId: "G-QKL46BL0DV",
       };
       let Secondary = initializeApp(firebaseConfig, "secondary");
       let auth2 = getAuth(Secondary);
@@ -118,7 +119,7 @@ function AddProfesor({
                 " a fost inregistrat ca profesor in catalogul scolii",
               text:
                 "Bună ziua! Ați fost adaugat ca și profesor în catalogul școlii. Intrați pe " +
-                process.env.REACT_APP_LINK +
+                "https://catalog-electronic.vercel.app/" +
                 " introduceți " +
                 adresaEmail +
                 " si parola " +
