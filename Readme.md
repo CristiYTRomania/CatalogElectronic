@@ -1,10 +1,43 @@
 # 📘 Catalogul Electronic
 
-**Realizat de:**
-1. Dobricean Ioan-Dorian  
-2. Gheorghieș Petruț-Rareș  
-3. Jitescu Silviu-Cristian  
+## 🧑‍💻 Contribuții
 
+### 1. **Dobricean Ioan-Dorian**  
+*(Coordonator de proiect)*  
+- A ales tema proiectului, limbajul de programare și stack-urile tehnologice.  
+- A coordonat implementarea componentelor principale.  
+- A ghidat echipa în învățarea și utilizarea frameworkului **React**.
+
+---
+
+### 2. **Gheorghieș Petruț-Rareș**  
+- A realizat paginile dedicate **adminului**.  
+- A configurat testarea end-to-end cu **Cypress** pe GitHub Actions – una dintre cele mai complexe părți ale proiectului.  
+- A efectuat **deploy-ul** aplicației pe **Vercel**.
+
+---
+
+### 3. **Jitescu Silviu-Cristian**  
+- A dezvoltat componentele funcționale esențiale ale aplicației.  
+- A integrat biblioteca **Ant Design (antd)** pentru interfața grafică.  
+- A participat la testarea aplicației și la rafinarea experienței de utilizator.
+
+---
+
+## 🛠️ Stack Tehnologic
+
+- **Frontend:** React, Ant Design  
+- **Testare:** Cypress, GitHub Actions  
+- **Deploy:** Vercel  
+- **Altele:** ESLint, Prettier, Yarn
+
+---
+
+## 🚀 Deploy Live
+
+Aplicația este disponibilă online la: [https://numele-aplicatiei.vercel.app](https://numele-aplicatiei.vercel.app)
+
+---
 ---
 
 ## ✅ Check-list – B. Procesul de dezvoltare software *(notă între 1 și 10)*
