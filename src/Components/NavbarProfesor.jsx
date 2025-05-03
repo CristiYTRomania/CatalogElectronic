@@ -78,17 +78,6 @@ const NavbarElev = () => {
         style={{ width: "200px", display: "flex", justifyContent: "center" }}
       >
         {" "}
-        {collapsed === false && (
-          <Image
-            width={100}
-            height={100}
-            src={process.env.REACT_APP_LOGO}
-            preview={false}
-            onClick={() => {
-              navigate("/");
-            }}
-          />
-        )}
       </div>
 
       <Menu

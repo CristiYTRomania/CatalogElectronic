@@ -653,21 +653,6 @@ function ElevPage() {
                 <Descriptions.Item label="Bursa">
                   {elevData.bursa}
                 </Descriptions.Item>
-                {process.env.REACT_APP_NAME === "LMTJ" && (
-                  <Descriptions.Item label="Prof. Indr">
-                    {elevData.profindr || ""}
-                  </Descriptions.Item>
-                )}
-                {process.env.REACT_APP_NAME === "LMTJ" && (
-                  <Descriptions.Item label="Ins. Prin.">
-                    {elevData.insprin || ""}
-                  </Descriptions.Item>
-                )}
-                {process.env.REACT_APP_NAME === "LMTJ" && (
-                  <Descriptions.Item label="Ins. Sec.">
-                    {elevData.inssec || ""}
-                  </Descriptions.Item>
-                )}
 
                 <Descriptions.Item label="Email-uri abonate">
                   {(elevData?.parintii || []).map((e) => (

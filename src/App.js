@@ -18,21 +18,20 @@ import ScrollMemoryWrapper from "./Components/ScrollMemoryWrapper";
 import axios from "axios"; // Im
 import LectiiElev from "./Pages/Admin/LectiiElevii";
 import Ajutor from "./Pages/Ajutor";
-import RaspundeFormular from "./Pages/Elevi/RaspuneFormular";
+
 import { useState } from "react";
 
 import Profil from "./Components/Profil";
 import { Select } from "antd";
 import Anunturi from "./Pages/Admin/Anunturi";
-import Feedback from "./Pages/Admin/Feedback";
+
 import NavbarProfesor from "./Components/NavbarProfesor";
 import AdministratorScutiri from "./Pages/Admin/AdministratorScutiri";
-import Formular from "./Pages/Admin/Formular";
+
 import { Navigate } from "react-router-dom";
 import "antd/dist/reset.css";
 import { useEffect } from "react";
 import { doc, onSnapshot, collection } from "firebase/firestore";
-import Condica from "./Pages/Profesori/Condica";
 
 import { useRef } from "react";
 import {
@@ -67,9 +66,8 @@ import ComentariiElev from "./Pages/Elevi/ComentariiElev";
 import StatisticiClase from "./Pages/Admin/StatisticiClase";
 import StatisticiScoala from "./Pages/Admin/StatisticiScoala";
 import { Space, Button } from "antd";
-import Concedii from "./Pages/Admin/Concedii";
+
 import { openSuccesNotification } from "./Components/Notifications/succesNotification";
-import CondicaPanel from "./Components/CondicaPanel";
 
 const { actions } = testSlice;
 const { GET_USER, SESSION } = actions;
@@ -472,22 +470,6 @@ function App() {
                         />
 
                         <Route
-                          path="/feedback"
-                          element={
-                            <ProfesoriProtectedRoute>
-                              <Feedback />
-                            </ProfesoriProtectedRoute>
-                          }
-                        />
-                        <Route
-                          path="/raspunde/:id"
-                          element={
-                            <EleviProtectedRoute>
-                              <RaspundeFormular />
-                            </EleviProtectedRoute>
-                          }
-                        />
-                        <Route
                           path="/scutiri-elev"
                           element={
                             <EleviProtectedRoute>
@@ -524,14 +506,7 @@ function App() {
                             </ProfesoriProtectedRoute>
                           }
                         />
-                        <Route
-                          path="/condica"
-                          element={
-                            <ProfesoriProtectedRoute>
-                              <Condica profesorData={user} />
-                            </ProfesoriProtectedRoute>
-                          }
-                        />
+
                         <Route path="/anunturi" element={<Anunturi />} />
                         <Route
                           path="/profesori"
@@ -549,14 +524,7 @@ function App() {
                             </AdminProtectedRoute>
                           }
                         />
-                        <Route
-                          path="/export-condica"
-                          element={
-                            <AdminProtectedRoute>
-                              <CondicaPanel />
-                            </AdminProtectedRoute>
-                          }
-                        />
+
                         <Route
                           path="/class/:id"
                           element={
@@ -599,14 +567,7 @@ function App() {
                             </ProfesoriProtectedRoute>
                           }
                         />
-                        <Route
-                          path="/formular/:id"
-                          element={
-                            <ProfesoriProtectedRoute>
-                              <Formular />
-                            </ProfesoriProtectedRoute>
-                          }
-                        />
+
                         {process.env.REACT_APP_PRIVACY !== "enable" && (
                           <Route
                             path="/elev-chat"
@@ -636,14 +597,7 @@ function App() {
                             </EleviProtectedRoute>
                           }
                         />
-                        <Route
-                          path="/concedii"
-                          element={
-                            <AdminProtectedRoute>
-                              <Concedii />
-                            </AdminProtectedRoute>
-                          }
-                        />
+
                         <Route
                           path="/scutiri"
                           element={

@@ -1,79 +1,70 @@
-# 📘 Catalogul Electronic
+# Getting Started with Create React App
 
-**Realizat de:**
-1. Dobricean Ioan-Dorian  
-2. Gheorghieș Petruț-Rareș  
-3. Jitescu Silviu-Cristian  
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
----
+## Available Scripts
 
-## ✅ Check-list – B. Procesul de dezvoltare software *(notă între 1 și 10)*
+In the project directory, you can run:
 
-### 🔹 1. User stories & Backlog creation
+### `npm start`
 
-- Am utilizat [Trello – Catalog Electronic](https://trello.com/b/grMq9bNH/catalog-electronic)
-- Am lucrat în principal individual și am notat user stories în Trello
-- Am inclus **minim 10 user stories**
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
----
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### 🔹 2. Diagrame (UML, workflow)
+### `npm test`
 
-- ❌ Nu au fost realizate diagrame
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
----
+### `npm run build`
 
-### 🔹 3. Source control cu Git
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- Am lucrat exclusiv cu **Git + GitHub**
-- Fiecare coleg a lucrat pe un **branch propriu**
-- Am făcut **pull requests** către `main`
-- Coechipierii au oferit **code review**
-- ✅ S-au realizat **minim 10 commits per membru**
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
----
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### 🔹 4. Teste automate *(2 pct)*
+### `npm run eject`
 
-- Am implementat **2 teste automate** folosind **GitHub Actions**:
-  - ✅ Test E2E cu **Cypress**
-  - ✅ Test de lint cu **ESLint**
-- **Nu permitem merge-ul** fără ca testele să treacă
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
----
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### 🔹 5. Raportare bug & rezolvare cu pull request *(1 pct)*
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-- Bug-urile identificate au fost **rezolvate prin PR-uri**
-- Am urmat procesul de **review + fix + merge**
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
----
+## Learn More
 
-### 🔹 6. Comentarii cod & respectarea code standards *(1 pct)*
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-- Codul este **structurat clar**:
-  - Folder `Pages/` → redă paginile principale
-  - Folder `Components/` → elemente reutilizabile
-  - Organizare pe roluri: `Admin/`, `Elev/`, `Profesor/`
-- Am folosit **ESLint în VSCode**
-  - Formatat automat la **on save**
-  - Validare ESLint și în **GitHub Action**
+To learn React, check out the [React documentation](https://reactjs.org/).
 
----
+### Code Splitting
 
-### 🔹 7. Design patterns *(1 pct)*
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-- ✅ Am folosit **High Order Component**  
-  > Ex: pentru afișarea erorilor sau a paginilor 404, am creat o componentă care încarcă automat funcțiile necesare și include pagina ca și copil.
-- ✅ **Redux** pentru state management, accesat în componente prin `useSelector`
-- ✅ **Programare funcțională** cu hook-uri personalizate
+### Analyzing the Bundle Size
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### 🔹 8. Prompt Engineering *(2 pct)*
+### Making a Progressive Web App
 
-- În timpul dezvoltării, am folosit instrumente AI pentru clarificări și optimizare:
-  - ✅ **DeepSeek** (modul deepThink) – întrebări legate de:
-    - Implementarea MFA prin email cu Firebase
-    - Configurația securizării emailurilor în Firebase
-  - Ocazional am folosit și **ChatGPT**, dar DeepSeek a fost companionul principal
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

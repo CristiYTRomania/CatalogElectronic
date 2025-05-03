@@ -130,8 +130,7 @@ const Navbar = () => {
           <DeleteOutlined />
         )
       ),
-    getItem("Condica", "condica", <BookOutlined />),
-    getItem("Feedback", "feedback", <TrophyOutlined />),
+
     getItem("Statistici", "statistici", <LineChartOutlined />, [
       {
         label: "Statistici Clase",
@@ -139,11 +138,10 @@ const Navbar = () => {
       },
       { label: "Statistici Scoala", key: "statistici-scoala" },
     ]),
-    getItem("Concedii", "concedii", <CoffeeOutlined />),
+
     getItem("Jurnal", "changelog", <ContainerOutlined />),
     getItem(user.displayName, `profil`, <SmileOutlined />),
-    getItem("Ajutor", "ajutor", <InfoCircleOutlined />),
-    getItem("Export Condica", "export-condica", <BookOutlined />),
+
     getItem("Setări", "setari", <SettingOutlined />),
   ];
 
@@ -173,17 +171,6 @@ const Navbar = () => {
         style={{ width: "200px", display: "flex", justifyContent: "center" }}
       >
         {" "}
-        {collapsed === false && (
-          <Image
-            width={100}
-            height={100}
-            src={process.env.REACT_APP_LOGO}
-            preview={false}
-            onClick={() => {
-              navigate("/");
-            }}
-          />
-        )}
       </div>
 
       <Menu

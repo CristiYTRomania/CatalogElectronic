@@ -20,7 +20,6 @@ import { Input } from "antd";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import ModalChangePassword from "./ModalSchimbareParola";
-import Condica from "../Pages/Profesori/Condica";
 import {
   getDataDoc,
   updateDocDatabase,
@@ -350,11 +349,6 @@ function ProfesorPage() {
             label: `Orar`,
             key: "Orar",
             children: <OrarProfesori profesorData={{ ...profesorData }} />,
-          },
-          (user.uid === profesorData.id || user.type === "admin") && {
-            label: `Condica`,
-            key: "Condica",
-            children: <Condica profesorData={profesorData} />,
           },
         ]}
       />
