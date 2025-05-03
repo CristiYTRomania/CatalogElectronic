@@ -1,7 +1,7 @@
 # 📘 Catalogul Electronic
 
-[Video prezentare aplicatie](https://www.youtube.com/watch?v=2jFBgGJkyWk)
-[Video prezentare testare cypress](https://www.youtube.com/watch?v=rHhsNEVWoKo)
+### [Video prezentare aplicatie](https://www.youtube.com/watch?v=2jFBgGJkyWk)
+### [Video prezentare testare cypress](https://www.youtube.com/watch?v=rHhsNEVWoKo)
 
 
 ## 🧑‍💻 Contribuții
