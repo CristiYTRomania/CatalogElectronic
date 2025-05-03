@@ -19,28 +19,29 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Run ESLint with fix
-        id: eslint
-        run: |
-          npx eslint src --ext .js,.jsx,.ts,.tsx --fix --max-warnings 0 || echo "ESLINT_FAILED=true" >> $GITHUB_ENV
+      # Pasul modificat: Rulează ESLint cu --fix fără a eșua imediat
+      - name: Run ESLint and fix
+        run: npx eslint src --ext .js,.jsx,.ts,.tsx --fix || true
 
+      # Pasul modificat: Adaugă autentificare pentru git push
       - name: Commit changes if needed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [[ `git status --porcelain` ]]; then
-            git add .
+          git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
+          git add .
+          if [ -n "$(git status --porcelain)" ]; then
             git commit -m "chore(lint): auto-fix lint errors via GitHub Actions"
-            git push
+            git push origin HEAD:${GITHUB_REF#refs/heads/}
           else
             echo "No changes to commit."
           fi
 
-      - name: Fail if lint issues remain
-        if: env.ESLINT_FAILED == 'true'
-        run: |
-          echo "Lint errors could not be fixed automatically. Please fix them manually."
-          exit 1
+      # Verificare finală pentru a asigura că nu există warn-uri rămase
+      - name: Fail if any warnings remain
+        run: npx eslint src --ext .js,.jsx,.ts,.tsx --max-warnings 0
 
   cypress-run:
     runs-on: ubuntu-latest
