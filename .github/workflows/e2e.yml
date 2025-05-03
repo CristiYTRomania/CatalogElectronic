@@ -6,10 +6,10 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -17,5 +17,9 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Run E2E tests
-        run: yarn test:e2e
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v6
+        with:
+          start: yarn start
+          wait-on: http://localhost:3000
+          wait-on-timeout: 60
