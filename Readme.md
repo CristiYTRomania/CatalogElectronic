@@ -13,7 +13,6 @@
 ### 2. **Gheorghieș Petruț-Rareș**  
 - A realizat paginile dedicate **adminului**.  
 - A configurat testarea end-to-end cu **Cypress** pe GitHub Actions – una dintre cele mai complexe părți ale proiectului.  
-- A efectuat **deploy-ul** aplicației pe **Vercel**.
 
 ---
 
@@ -21,6 +20,7 @@
 - A dezvoltat componentele funcționale esențiale ale aplicației.  
 - A integrat biblioteca **Ant Design (antd)** pentru interfața grafică.  
 - A participat la testarea aplicației și la rafinarea experienței de utilizator.
+- A efectuat **deploy-ul** aplicației pe **Vercel**.
 
 ---
 
