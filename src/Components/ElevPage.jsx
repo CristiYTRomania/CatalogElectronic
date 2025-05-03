@@ -26,7 +26,6 @@ import { RollbackOutlined } from "@ant-design/icons";
 import Docxtemplater from "docxtemplater";
 import PizZip from "pizzip";
 import { saveAs } from "file-saver";
-import template from "./instiintare parinti 2024 completat.docx";
 
 import {
   useWindowSize,
@@ -56,7 +55,7 @@ import EditElev from "./EditElev";
 import { limit } from "firebase/firestore";
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "../database/firebase";
-import templateCorigenta from "./instiintare parinti corigenti completat.docx";
+
 import { motiveazaAbsente } from "../utils/absente";
 import withErrorBoundary from "./withErrorComponent";
 const { actions } = testSlice;

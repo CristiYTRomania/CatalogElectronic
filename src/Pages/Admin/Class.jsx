@@ -198,11 +198,7 @@ function Class() {
                   />
                 ),
               },
-              process.env.REACT_APP_RESTRICT !== "enable" ?? {
-                label: `Chat`,
-                key: "CHAT",
-                children: <Chat classId={classId} classData={classData} />,
-              },
+
               {
                 label: `Teme`,
                 key: "Teme",

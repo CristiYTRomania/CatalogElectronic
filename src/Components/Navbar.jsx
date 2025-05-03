@@ -29,7 +29,7 @@ import AddElev from "../Pages/Admin/AddElev";
 import { Breadcrumb, Layout, Menu, theme, Image } from "antd";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Chats from "../Pages/Chats/View";
+
 import { useSelector } from "react-redux";
 import ProfileElevi from "../Pages/Admin/ProfileElevi";
 import { getDocs, collection, onSnapshot } from "firebase/firestore";
@@ -166,7 +166,6 @@ const Navbar = () => {
       />
       <ProfileElevi open={openSearch} setOpen={setOpenSearch} />
 
-      <Chats open={open} setOpen={setOpen} />
       <div
         style={{ width: "200px", display: "flex", justifyContent: "center" }}
       >

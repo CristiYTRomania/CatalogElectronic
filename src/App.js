@@ -567,19 +567,6 @@ function App() {
                           }
                         />
 
-                        {process.env.REACT_APP_PRIVACY !== "enable" && (
-                          <Route
-                            path="/elev-chat"
-                            element={
-                              <EleviProtectedRoute>
-                                <Chat
-                                  classId={user.clasa}
-                                  classData={user.clasaMea}
-                                />
-                              </EleviProtectedRoute>
-                            }
-                          />
-                        )}
                         <Route
                           path="/submisi-tema/:id"
                           element={
