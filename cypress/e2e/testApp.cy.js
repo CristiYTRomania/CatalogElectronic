@@ -10,14 +10,14 @@ describe("tets", () => {
     cy.get('input[name="pass"]').type("1234567");
     cy.get("#login-btn").click();
 
-    cy.wait(10000);
+    cy.wait(20000);
     cy.get('input[name="mfaCode"]').type("123456");
     cy.get("#login-btn").click();
 
     cy.wait(20000);
     cy.contains("span.ant-menu-title-content", "Clase").click();
     cy.get("div.ant-card-meta-title").contains("a V-a D").click();
-    cy.wait(2000);
+    cy.wait(20000);
     cy.get("span.anticon-plus").first().click();
     cy.contains("span", "OK").click();
     const today = new Date();
