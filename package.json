@@ -74,7 +74,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "test:e2e": "cypress run",
+    "test:e2e": "start-server-and-test start http://localhost:3000 cypress run",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -87,9 +87,9 @@
     ]
   },
   "devDependencies": {
-  "cypress": "^13.0.0"
+    "cypress": "^13.0.0",
+    "start-server-and-test": "^2.0.11"
   },
-
   "browserslist": {
     "production": [
       ">0.2%",

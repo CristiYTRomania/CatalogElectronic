@@ -15,7 +15,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: yarn
+        run: yarn install
 
-      - name: Run E2E Tests
-        run: npm run test:e2e
+      - name: Run E2E tests
+        run: yarn test:e2e
