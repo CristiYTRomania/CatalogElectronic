@@ -57,7 +57,6 @@
   - Organizare pe roluri: `Admin/`, `Elev/`, `Profesor/`
 - Am folosit **ESLint în VSCode**
   - Formatat automat la **on save**
-  - Validare ESLint și în **GitHub Action**
 
 ---
 
