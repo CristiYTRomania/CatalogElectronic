@@ -86,6 +86,10 @@
       "react-app/jest"
     ]
   },
+  "devDependencies": {
+  "cypress": "^13.0.0"
+  },
+
   "browserslist": {
     "production": [
       ">0.2%",
