@@ -61,7 +61,6 @@ import TemeElevi from "./Pages/Elevi/TemeElevi";
 import ProfesoriElevi from "./Pages/Elevi/ProfesoriElevi";
 import Submisii from "./Pages/Admin/Submisii";
 import CatalogElev from "./Pages/Elevi/CatalogElev";
-import Chat from "./Components/Comments/Chat";
 import ComentariiElev from "./Pages/Elevi/ComentariiElev";
 import StatisticiClase from "./Pages/Admin/StatisticiClase";
 import StatisticiScoala from "./Pages/Admin/StatisticiScoala";

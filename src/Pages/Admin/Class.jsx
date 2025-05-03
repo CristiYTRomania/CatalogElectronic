@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Tabs, Select } from "antd";
 import { Feed } from "semantic-ui-react";
-import Chat from "../../Components/Comments/Chat";
+
 import { useParams } from "react-router-dom";
 import { getDataDoc } from "../../database";
 import "./Class.css";
