@@ -7,7 +7,6 @@
 ## 🧑‍💻 Contribuții
 
 ### 1. **Dobricean Ioan-Dorian**  
-*(Coordonator de proiect)*  
 - A ales tema proiectului, limbajul de programare și stack-urile tehnologice.  
 - A coordonat implementarea componentelor principale.  
 - A ghidat echipa în învățarea și utilizarea frameworkului **React**.
