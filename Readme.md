@@ -38,8 +38,7 @@
 
 ## 🚀 Deploy Live
 
-Aplicația este disponibilă online la: [https://numele-aplicatiei.vercel.app](https://catalog-electronic.vercel.app)
-
+Aplicația este disponibilă online la: [https://catalog-electronic.vercel.app](https://catalog-electronic.vercel.app)
 ---
 ---
 
