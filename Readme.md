@@ -112,8 +112,4 @@ Aplicația este disponibilă online la: [https://catalog-electronic.vercel.app](
 
 ### 🔹 8. Prompt Engineering *(2 pct)*
 
-- În timpul dezvoltării, am folosit instrumente AI pentru clarificări și optimizare:
-  - ✅ **DeepSeek** (modul deepThink) – întrebări legate de:
-    - Implementarea MFA prin email cu Firebase
-    - Configurația securizării emailurilor în Firebase
-  - Ocazional am folosit și **ChatGPT**, dar DeepSeek a fost companionul principal
+-Documentație: https://github.com/CristiYTRomania/CatalogElectronic/blob/main/LLM-documentation.md
