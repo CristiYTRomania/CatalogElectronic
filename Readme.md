@@ -97,13 +97,14 @@ Aplicația este disponibilă online la: [https://catalog-electronic.vercel.app](
   - Organizare pe roluri: `Admin/`, `Elev/`, `Profesor/`
 - Am folosit **ESLint în VSCode**
   - Formatat automat la **on save**
+  - Fișier care respectă code standards: https://github.com/CristiYTRomania/CatalogElectronic/blob/main/src/Components/ProfesorPage.jsx
 
 ---
 
 ### 🔹 7. Design patterns *(1 pct)*
 
 - ✅ Am folosit **High Order Component**  
-  > Ex: pentru afișarea erorilor sau a paginilor 404, am creat o componentă care încarcă automat funcțiile necesare și include pagina ca și copil.
+  > Ex: pentru afișarea erorilor, am creat o componentă care încarcă automat funcțiile necesare și include pagina ca și copil.
 - ✅ **Redux** pentru state management, accesat în componente prin `useSelector`
 - ✅ **Programare funcțională** cu hook-uri personalizate
 
