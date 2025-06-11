@@ -49,6 +49,7 @@ Aplicația este disponibilă online la: [https://catalog-electronic.vercel.app](
 - Am utilizat [Trello – Catalog Electronic](https://trello.com/b/grMq9bNH/catalog-electronic)
 - Am lucrat în principal individual și am notat user stories în Trello
 - Am inclus **minim 10 user stories**
+- User stories cu acceptance criteria: https://trello.com/c/9F5uxMqi/18-ca-utilizator-profesor-doresc-sa-pot-sa-pun-abaderi-pe-care-sa-le-vada-parintii https://trello.com/c/zI3afdIt/14-ca-utilizatordirector-doresc-sa-am-o-interfata-de-statistici https://trello.com/c/jch3vp1d/13-ca-utilizator-profesor-doresc-sa-pun-rapid-absente-si-note
 
 ---
 
